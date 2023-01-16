@@ -24,9 +24,8 @@ function Header() {
 	useEffect(() => {
 		setDate(new Date());
 	}, []);
-
 	const handleRegister = () => {
-		fetch('http://localhost:3000/users/signup', {
+		fetch('https://morning-news-backend-mu.vercel.app/users/signup', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username: signUpUsername, password: signUpPassword }),
@@ -43,7 +42,7 @@ function Header() {
 
 	const handleConnection = () => {
 
-		fetch('http://localhost:3000/users/signin', {
+		fetch('https://morning-news-backend-mu.vercel.app/users/signin', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username: signInUsername, password: signInPassword }),
